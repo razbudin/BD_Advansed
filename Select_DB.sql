@@ -50,10 +50,10 @@ GROUP BY albums.id_album;
 SELECT name_artist 
 FROM artists
 WHERE name_artist NOT IN (SELECT name_artist --, albums.id_album, albums.year_release -- проверка
-					                FROM artists
-					                JOIN artist_album ON artist_album.id_artist = artists.id_artist
-					                JOIN albums ON albums.id_album = artist_album.id_album
-					                WHERE albums.year_release = '2020');
+					 	FROM artists
+					 	JOIN artist_album ON artist_album.id_artist = artists.id_artist
+					 	JOIN albums ON albums.id_album = artist_album.id_album
+					 	WHERE albums.year_release = '2020');
 
 --Названия сборников, в которых присутствует конкретный исполнитель (выберите его сами).
 SELECT DISTINCT compilations.name_compilation
